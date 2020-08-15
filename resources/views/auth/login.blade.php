@@ -14,18 +14,18 @@
     <link href="{{ asset('font-awesome/css/font-awesome.css') }}" rel="stylesheet">
 </head>
 
-<body class="gray-bg">
+<body class="wrapper gray-bg">
 
 <div class="middle-box text-center loginscreen animated fadeInDown">
     <div>
-
-        <div><h2 style="margin-top: 100px">Admin Login</h2></div>
+            
+        <h1 class="logo-name">Admin Login</h1>
 
         <form class="m-t" role="form" method="POST" action="{{ route('login') }}">
             @csrf
             <div class="form-group">
                 <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email"
-                       value="{{ old('email') }}" autocomplete="email" autofocus>
+                       value="{{ old('email') }}" placeholder="Email" autofocus>
 
                 @error('email')
                 <span class="invalid-feedback" role="alert">
@@ -38,7 +38,7 @@
 
             <div class="form-group">
                 <input id="password" type="password" class="form-control @error('password') is-invalid @enderror"
-                       name="password" autocomplete="current-password">
+                       name="password" placeholder="Password">
 
                 @error('password')
                 <span class="invalid-feedback" role="alert">
