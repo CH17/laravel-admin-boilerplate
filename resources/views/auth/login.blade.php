@@ -4,12 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- CSRF Token -->
-    <meta name="csrf-token" content="{{ csrf_token() }}">
-
     <title>Login</title>
-
-    <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('font-awesome/css/font-awesome.css') }}" rel="stylesheet">
 </head>
@@ -28,9 +23,9 @@
                        value="{{ old('email') }}" placeholder="Email" autofocus>
 
                 @error('email')
-                <span class="invalid-feedback" role="alert">
+                <div class="invalid-feedback text-left" role="alert">
                     <strong>{{ $message }}</strong>
-                </span>
+                </div>
                 @enderror
 
             </div>
@@ -41,9 +36,9 @@
                        name="password" placeholder="Password">
 
                 @error('password')
-                <span class="invalid-feedback" role="alert">
+                <div class="invalid-feedback text-left" role="alert">
                     <strong>{{ $message }}</strong>
-                </span>
+                </div>
                 @enderror
             </div>
 

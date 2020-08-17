@@ -1,5 +1,7 @@
 @extends('backend.layouts.master')
 
+@section('page_title', 'Dashboard | App Name')
+
 @section('content')
     <div class="row wrapper border-bottom white-bg page-heading">
         <div class="col-lg-10">
@@ -12,9 +14,6 @@
                     <strong>Page Name</strong>
                 </li>
             </ol>
-        </div>
-        <div class="col-lg-2">
-
         </div>
     </div>
 
